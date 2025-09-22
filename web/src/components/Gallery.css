@@ -1,0 +1,33 @@
+.gallery {
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.gallery h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.gallery h2 span { color: #b88e2f; }
+
+/* container to keep image centered and constrained */
+.gallery__wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* the single composite image */
+.gallery__img {
+  width: 100%;
+  height: auto;          /* responsive scaling */
+  display: block;
+  border-radius: 8px;    /* optional, remove if not in figma */
+}
+
+/* ✅ hide the image on small screens, keep heading visible */
+@media (max-width: 640px) {
+  .gallery__img { display: none; }
+  /* if you also want to reduce spacing when hidden: */
+  .gallery { padding-bottom: 16px; }
+}
+  

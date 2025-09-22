@@ -1,0 +1,90 @@
+/* Base */
+:root {
+  --text: #111;
+  --muted: #777;
+  --border: #ddd;
+  --gold: #c49b3f;
+}
+* { box-sizing: border-box; }
+.contact { color: var(--text); background: #fff; }
+
+/* Hero */
+.contact-hero {
+  position: relative;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+.contact-hero__overlay {
+  position: absolute; inset: 0;
+  background: rgba(255,255,255,.6);
+}
+.contact-hero__inner {
+  position: relative; text-align: center;
+}
+.contact-logo {
+  font-size: 28px; font-weight: 600;
+}
+.breadcrumb { margin-top: 6px; font-size: 14px; color: #666; }
+.breadcrumb a { color: #000; text-decoration: none; }
+
+/* Title & sub */
+.contact-head { text-align: center; padding: 56px 20px 36px; }
+.contact-head h1 { font-size: 28px; font-weight: 600; margin: 0 0 10px; }
+.contact-head p { max-width: 650px; margin: 0 auto; font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* Layout */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px 70px; }
+.contact-layout {
+  display: grid; gap: 40px; grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 900px) { .contact-layout { grid-template-columns: 1fr; } }
+
+/* Left info */
+.contact-info .info-block { display: flex; gap: 14px; margin-bottom: 28px; align-items: flex-start; }
+.info-ico { display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; }
+.contact-info h3 { margin: 0 0 6px; font-size: 18px; font-weight: 600; }
+.contact-info p { margin: 0; font-size: 14px; color: #555; line-height: 1.6; }
+
+/* Form */
+.contact-form form { display: flex; flex-direction: column; gap: 20px; }
+.contact-form label span { display: block; font-size: 14px; margin-bottom: 6px; color: #333; }
+.contact-form input, .contact-form textarea {
+  width: 100%; padding: 12px 14px; border: 1px solid var(--border);
+  border-radius: 6px; font-size: 14px; outline: none; transition: border .25s;
+  background: #fff;
+}
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--gold); }
+/* Force the submit button to be visible and styled */
+.contact-form .btn-submit {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  width: 120px;
+  margin-top: 6px;
+  padding: 12px;
+
+  background: #b58a2d !important; /* always this color */
+  color: #fff !important;
+  border: none !important;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  box-shadow: none !important;
+}
+
+/* No hover change at all */
+.contact-form .btn-submit:hover,
+.contact-form .btn-submit:focus,
+.contact-form .btn-submit:active {
+  background: #b58a2d !important;
+  color: #fff !important;
+}

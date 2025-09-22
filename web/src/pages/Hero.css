@@ -1,0 +1,73 @@
+.hero {
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  padding: 40px;
+}
+
+/* Inner promo card */
+.hero__inner {
+  margin-left: 60%;
+  background: #fff3e3;          /* light beige box */
+  padding: 40px 50px;
+  max-width: 450px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.hero__tag {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+}
+
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #b88e2f;               /* golden brown like Figma */
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.hero__desc {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 24px;
+}
+
+.hero__btn {
+  background: #b88e2f;
+  color: #fff;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.hero__btn:hover {
+  background: #9c7424;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .hero {
+    justify-content: center;
+    padding: 20px;
+  }
+  .hero__inner {
+    padding: 24px;
+    text-align: center;
+  }
+  .hero__title {
+    font-size: 28px;
+  }
+}

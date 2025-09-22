@@ -1,0 +1,71 @@
+/* Google font like screenshot */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root{
+  --text:#111;
+  --muted:#777;
+  --border:#ddd;
+  --gold:#b58a2d;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0}
+.checkout{font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:#fff}
+
+/* ===== HERO ===== */
+.co-hero{
+  position:relative;height:200px;background-size:cover;background-position:center;
+  display:grid;place-items:center
+}
+.co-hero__overlay{position:absolute;inset:0;background:rgba(255,255,255,.6)}
+.co-hero__inner{position:relative;text-align:center}
+.co-title{font-size:32px;font-weight:600}
+.co-breadcrumb{margin-top:6px;font-size:14px;color:#666}
+.co-breadcrumb a{color:#000;text-decoration:none}
+
+/* ===== WRAP / GRID ===== */
+.co-wrap{max-width:1100px;margin:0 auto;padding:54px 20px 70px}
+.co-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:48px}
+@media (max-width:980px){.co-grid{grid-template-columns:1fr}}
+
+/* ===== LEFT: BILLING ===== */
+.section-heading{font-size:26px;font-weight:600;margin:0 0 20px}
+.billing-form{display:flex;flex-direction:column;gap:18px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:640px){.grid-2{grid-template-columns:1fr}}
+.billing-form label span{display:block;font-size:13px;color:#333;margin:0 0 6px}
+.billing-form input,
+.select select{
+  width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:6px;
+  font-size:14px;outline:none;background:#fff
+}
+.billing-form input:focus,
+.select select:focus{border-color:var(--gold)}
+.select{position:relative}
+.select .caret{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;color:#666;pointer-events:none}
+
+/* ===== RIGHT: SUMMARY ===== */
+.summary{border-left:1px solid #eee;padding-left:38px}
+@media (max-width:980px){.summary{border-left:none;padding-left:0}}
+.summary-head{display:grid;grid-template-columns:1fr auto;font-weight:500;margin-bottom:14px}
+.summary-row{display:grid;grid-template-columns:1fr auto;align-items:center;padding:8px 0}
+.summary-row.total{padding-top:12px}
+.muted{color:#888}
+.total-amt{color:var(--gold);font-weight:600}
+.divide{border:none;border-top:1px solid #eee;margin:12px 0 16px}
+
+/* Radio/pay */
+.radio{display:flex;align-items:center;gap:8px;margin:10px 0}
+.radio input{accent-color:#111}
+.radio.muted span{color:#999}
+.hint{font-size:13px;color:#9a9a9a;line-height:1.6;margin:6px 0 10px}
+
+/* Policy & button */
+.policy{font-size:13px;color:#666;line-height:1.7;margin:10px 0 18px}
+.policy .link{color:#000;text-decoration:underline}
+.btn-outline{
+  display:inline-flex;align-items:center;justify-content:center;
+  border:1px solid #111;border-radius:8px;background:#fff;color:#111;
+  padding:12px 22px;font-size:14px;font-weight:500;cursor:pointer
+}
+/* no hover effect change to keep it subtle */

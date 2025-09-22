@@ -1,0 +1,155 @@
+/* Section container */
+.prod {
+  background: #fff;
+}
+.prod__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+.prod__title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  margin: 6px 0 18px;
+}
+
+/* Grid */
+.prod__grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0,1fr));
+  gap: 18px;
+}
+@media (min-width: 700px) {
+  .prod__grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (min-width: 1024px) {
+  .prod__grid { grid-template-columns: repeat(4, minmax(0,1fr)); }
+}
+
+/* Tile (card) */
+.tile {
+  border: 1px solid #eaeaea;
+  background: #fff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image area + overlay */
+.tile__media {
+  position: relative;
+  background: #f5f5f5;
+}
+.tile__media img {
+  width: 100%;
+  height: 300px;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+/* Outline button style */
+.btn-outline {
+  border: 1px solid #b88e2f;       /* golden border */
+  color: #b88e2f;                  /* golden text */
+  background: transparent;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.25s ease-in-out;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn-outline:hover {
+  background: #b88e2f;
+  color: #222222;                     /* text turns white on hover */
+}
+
+
+/* Badges */
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+.badge--sale { background: #e84747; } /* red -50% */
+.badge--new  { background: #2ab67b; }  /* green New */
+
+/* Hover overlay */
+.tile__overlay {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+.tile:hover .tile__overlay { opacity: 1; }
+.tile__cta {
+  pointer-events: all;
+  background: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,.2);
+}
+.tile__actions {
+  pointer-events: all;
+  position: absolute;
+  left: 14px;
+  bottom: 10px;
+  display: flex;
+  gap: 16px;
+}
+.linkish {
+  background: none;
+  border: none;
+  color: #fff;
+  opacity: .95;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Body */
+.tile__body { padding: 12px; }
+.tile__title { margin: 0 0 4px; font-size: 16px; font-weight: 700; color: #1c1c1c; }
+.tile__sub   { margin: 0 0 10px; color: #8b8b8b; font-size: 14px; }
+.tile__prices { display: flex; align-items: center; gap: 10px; }
+.tile__price { font-weight: 800; }
+.tile__old   { color: #a9a9a9; text-decoration: line-through; }
+
+/* Show more */
+.prod__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+.btn-outline {
+  background: #fff;
+  border: 1px solid #b88e2f;
+  color: #b88e2f;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-outline:hover { background: #fff7e6; }
+.prod__end { color: #9b9b9b; }
+
+/* States */
+.state { text-align: center; color: #6b7280; padding: 24px 0; }
+.state--error { color: #b91c1c; }
